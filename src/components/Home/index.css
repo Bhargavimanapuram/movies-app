@@ -1,0 +1,12 @@
+.movies-app-home-page-top-bg {
+  background-image: url('https://res.cloudinary.com/dxgpp8aab/image/upload/v1661785288/Imagemovies-app-home-page-bg-img_ailexg.png');
+  margin-top: 0;
+  width: 100%;
+  background-size: cover;
+}
+.movie-page-header-heading {
+  font-family: 'Roboto';
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 62px;
+}

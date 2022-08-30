@@ -1,0 +1,161 @@
+.movies-app-login-section-bg {
+  background-color: rgba(19, 19, 19, 1);
+  min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .movies-app-login-section-bg {
+    background-image: url('https://res.cloudinary.com/dxgpp8aab/image/upload/v1661751710/netfilx_1login-screen_background_nkcocv.png');
+  }
+}
+
+.login-page-logo {
+  height: 27px;
+  width: 100px;
+  margin-left: 32px;
+  margin-top: 32px;
+  border-radius: 0px;
+}
+@media screen and (min-width: 768px) {
+  .login-page-logo {
+    height: 52.0005989074707px;
+    width: 180px;
+    margin-left: 165px;
+    margin-top: 48px;
+    border-radius: 0px;
+  }
+}
+
+.movies-app-login-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+@media screen and (max-width: 768px) {
+  .movies-app-login-content-container {
+    width: 100%;
+  }
+}
+.movies-app-login-container {
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+}
+@media screen and (min-width: 768px) {
+  .movies-app-login-container {
+    position: absolute;
+    width: 456px;
+    height: 440px;
+    background-color: #0c0b10;
+    opacity: 0.8;
+    border-radius: 8px;
+    align-self: center;
+    padding: 48px;
+  }
+}
+.movies-app-login-heading {
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+@media screen and (min-width: 768px) {
+  .movies-app-login-heading {
+    font-weight: 600;
+    text-align: center;
+  }
+}
+.movies-app-login-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movies-app-login-input-container {
+  display: flex;
+  flex-direction: column;
+}
+.movies-app-login-label-element {
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.movies-app-login-input-element {
+  height: 40px;
+  left: 0%;
+  right: 0%;
+  background-color: #333333;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #e2e8f0;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Roboto';
+}
+@media screen and (min-width: 768px) {
+  .movies-app-login-input-element {
+    margin-bottom: 24px;
+  }
+}
+.password-input-element {
+  margin-bottom: 12px;
+}
+.movies-app-mobile-login-button {
+  background: #e50914;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #f8fafc;
+  height: 40px;
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .movies-app-mobile-login-button {
+    display: none;
+  }
+}
+.movies-app-screen-login-button {
+  background: #e50914;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #f8fafc;
+  height: 40px;
+  margin-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  .movies-app-screen-login-button {
+    display: none;
+  }
+}
+
+.movies-app-login-error-msg {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #dc2626;
+  margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .movies-app-login-error-msg {
+    line-height: 18px;
+  }
+}

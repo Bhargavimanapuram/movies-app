@@ -1,0 +1,110 @@
+.movie-page-nav-container {
+  background-color: #00000033;
+}
+.movie-page-header-content-container {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px;
+}
+.movie-page-header-content-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-page-logo-items-container {
+  display: flex;
+  align-items: center;
+}
+.movie-page-header-screen-logo {
+  width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .movie-page-header-screen-logo {
+    width: 135px;
+    margin-right: 48px;
+  }
+}
+.movie-page-nav-items-screen-container {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .movie-page-nav-items-screen-container {
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+  }
+}
+.movie-page-nav-items-screen {
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: 24px;
+  font-weight: 400;
+}
+.movies-page-nav-search-icon-button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.movies-page-nav-search-icon {
+  font-size: 24px;
+  color: #ffffff;
+  margin-right: 16px;
+}
+@media screen and (min-width: 768px) {
+  .movies-page-nav-search-icon {
+    margin-right: 24px;
+  }
+}
+.movie-page-nav-avthar {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .movie-page-nav-avthar {
+    display: block;
+  }
+}
+.menu-open-icon {
+  font-size: 30px;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .menu-open-icon {
+    display: none;
+  }
+}
+.movie-page-nav-menu-mobile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .movie-page-nav-menu-mobile-container {
+    display: none;
+  }
+}
+.movie-page-nav-items-mobile-container {
+  padding-left: 0;
+  display: flex;
+  list-style-type: none;
+}
+.movies-app-cross-icon {
+  color: #ffffff;
+  font-size: 24px;
+}
+.movie-page-nav-items-mobile {
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 24px;
+  font-weight: 400;
+}
+.nav-link {
+  text-decoration: none;
+}
+.active-item {
+  font-weight: 800;
+}
+.not-active-item {
+  font-weight: 400;
+}
