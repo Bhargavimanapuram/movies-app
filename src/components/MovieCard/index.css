@@ -1,0 +1,19 @@
+.movie-image {
+  margin-right: 12px;
+  margin-bottom: 12px;
+  height: 100px;
+  width: 90px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 630px) and (max-width: 990px) {
+  .movie-image {
+    height: 120px;
+    width: 160px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .movie-image {
+    height: 170px;
+    width: 255px;
+  }
+}

@@ -1,0 +1,23 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icons-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.contact-us-text {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 24px;
+}

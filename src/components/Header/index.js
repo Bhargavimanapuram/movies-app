@@ -71,8 +71,13 @@ class Header extends Component {
         popularItemStyle = 'not-active-item'
         accountItemStyle = 'active-item'
         break
-      default:
+      case '/':
         homeItemStyle = 'active-item'
+        popularItemStyle = 'not-active-item'
+        accountItemStyle = 'not-active-item'
+        break
+      default:
+        homeItemStyle = 'not-active-item'
         popularItemStyle = 'not-active-item'
         accountItemStyle = 'not-active-item'
     }
@@ -81,11 +86,13 @@ class Header extends Component {
         <div className="movie-page-header-content-container">
           <div className="movie-page-header-content-screen">
             <div className="movie-page-logo-items-container">
-              <img
-                className="movie-page-header-screen-logo"
-                alt="website logo"
-                src="https://res.cloudinary.com/dxgpp8aab/image/upload/v1661789897/Group_7399movie-page-header-website-logo_g0ovfv.png"
-              />
+              <Link className="nav-link" to="/">
+                <img
+                  className="movie-page-header-screen-logo"
+                  alt="website logo"
+                  src="https://res.cloudinary.com/dxgpp8aab/image/upload/v1661789897/Group_7399movie-page-header-website-logo_g0ovfv.png"
+                />
+              </Link>
               <ul className="movie-page-nav-items-screen-container">
                 <Link className="nav-link" to="/">
                   <li

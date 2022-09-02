@@ -1,12 +1,31 @@
-.movies-app-home-page-top-bg {
-  background-image: url('https://res.cloudinary.com/dxgpp8aab/image/upload/v1661785288/Imagemovies-app-home-page-bg-img_ailexg.png');
-  margin-top: 0;
-  width: 100%;
-  background-size: cover;
+.movies-app-home-bg {
+  background-color: #131313;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
-.movie-page-header-heading {
+
+.movies-app-content-container {
+  min-height: 60vh;
+}
+.movies-app-home-slick-container {
+  width: 80%;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.slick-heading {
   font-family: 'Roboto';
-  font-size: 64px;
+  font-style: normal;
   font-weight: 600;
-  line-height: 62px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .slick-heading {
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 20px;
+  }
 }

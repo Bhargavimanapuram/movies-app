@@ -1,0 +1,70 @@
+.movies-page-home-poster-content-container {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+}
+.movie-page-home-poster-heading {
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 62px;
+  color: #ffffff;
+  margin-top: 120px;
+}
+@media screen and (min-width: 768px) {
+  .movie-page-home-poster-heading {
+    font-size: 64px;
+  }
+}
+.movie-page-home-poster-des {
+  width: 296px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  line-height: 26.06px;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .movie-page-home-poster-des {
+    width: 443px;
+    font-size: 20px;
+  }
+}
+.movies-app-home-poster-play-button {
+  padding: 8px 24px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.poster-loader-container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  margin-top: 20px;
+}
+.poster-failure-container {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 60vh;
+}
+.home-page-failure-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.movies-app-home-poster-try-again-button {
+  padding: 8px 24px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
