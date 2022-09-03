@@ -59,10 +59,11 @@ class HomePagePoster extends Component {
     const {backgroundImageUrl, overview, title} = homePosterDetails
     return (
       <div
+        className="poster-container"
         style={{
-          backgroundImage: `url(${backgroundImageUrl})`,
+          '--img': `url(${backgroundImageUrl})`,
           backgroundSize: '100% 100%',
-          height: '100%',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         <Header />

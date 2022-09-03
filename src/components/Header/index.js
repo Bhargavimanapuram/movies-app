@@ -12,6 +12,7 @@ let accountItemStyle
 class Header extends Component {
   state = {
     showMenu: false,
+    showSearchInput: false,
   }
 
   onclickMenuOpen = () => {
@@ -24,6 +25,16 @@ class Header extends Component {
     this.setState({
       showMenu: false,
     })
+  }
+
+  onClickSearchButton = () => {
+    const {history} = this.props
+    this.setState(
+      {
+        showSearchInput: true,
+      },
+      history.replace('/search'),
+    )
   }
 
   renderMenuItemsCard = () => (
@@ -55,8 +66,27 @@ class Header extends Component {
     </div>
   )
 
+  renderSearchInput = () => (
+    <div className="search-input-container">
+      <input
+        onBlur={this.onBlurSearchInput}
+        placeholder="Search"
+        className="input-container"
+        type="search"
+      />
+      <button
+        onClick={this.onClickSearchIcon}
+        className="search-button"
+        type="button"
+        testid="searchButton"
+      >
+        <HiOutlineSearch className="search-icon" />
+      </button>
+    </div>
+  )
+
   render() {
-    const {showMenu} = this.state
+    const {showMenu, showSearchInput} = this.state
 
     const {match} = this.props
     const {path} = match
@@ -111,7 +141,9 @@ class Header extends Component {
               </ul>
             </div>
             <div className="movie-page-logo-items-container">
+              {showSearchInput && this.renderSearchInput()}
               <button
+                onClick={this.onClickSearchButton}
                 testid="searchButton"
                 className="movies-page-nav-search-icon-button"
                 type="button"

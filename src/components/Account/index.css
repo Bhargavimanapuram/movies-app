@@ -1,0 +1,128 @@
+.account-page-container {
+  background-color: #131313;
+  height: 100vh;
+  padding: 0;
+}
+.account-details-container {
+  height: 70vh;
+  background-color: #ffffff;
+  margin-top: 0;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.account-details-content-container {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+}
+.account-heading {
+  color: #131313;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+@media screen and (min-height: 768px) {
+  .account-heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+  }
+}
+.horizontal-line {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+.credentials-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.name-password-container {
+  margin-left: 15px;
+}
+.membership-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #94a3b8;
+}
+@media screen and (min-width: 768px) {
+  .membership-text {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+.username-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1e293b;
+}
+@media screen and (min-width: 768px) {
+  .username-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+.password-text {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+@media screen and (min-width: 768px) {
+  .password-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+.features-container {
+  display: flex;
+  align-items: center;
+}
+.premium-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1e293b;
+  margin-left: 30px;
+}
+@media screen and (min-width: 768px) {
+  .premium-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.ultra-hd-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1e293b;
+  padding: 0;
+  border: 1px solid #1e293b;
+  margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .ultra-hd-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.logout-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout-button {
+  background: #e50914;
+  border-radius: 4px;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  border: 0;
+}

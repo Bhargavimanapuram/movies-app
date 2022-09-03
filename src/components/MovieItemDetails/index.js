@@ -155,10 +155,11 @@ class MovieItemDetails extends Component {
     return (
       <div>
         <div
+          className="poster-container"
           style={{
-            backgroundImage: `url(${backgroundImage})`,
+            '--img': `url(${backgroundImage})`,
             backgroundSize: '100% 100%',
-            height: '100%',
+            backgroundRepeat: 'no-repeat',
           }}
         >
           <Header />

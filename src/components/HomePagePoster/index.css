@@ -3,6 +3,17 @@
   max-width: 1140px;
   margin: auto;
 }
+.poster-container {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(24, 24, 24, 1),
+      rgba(24, 24, 24, 0.6),
+      rgba(24, 24, 24, 0)
+    ),
+    var(--img);
+}
 .movie-page-home-poster-heading {
   font-family: 'Roboto';
   font-size: 36px;
