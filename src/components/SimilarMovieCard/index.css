@@ -1,8 +1,23 @@
+.movie-card-item {
+  list-style-type: none;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  width: 90px;
+}
+@media screen and (min-width: 630px) and (max-width: 990px) {
+  .movie-card-item {
+    width: 160px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .movie-card-item {
+    width: 255px;
+  }
+}
 .similar-movie-image {
-  margin-right: 12px;
-  margin-bottom: 12px;
-  height: 75px;
-  width: 105px;
+  height: 100px;
+  width: 90px;
   border-radius: 8px;
 }
 @media screen and (min-width: 630px) and (max-width: 990px) {
@@ -15,5 +30,18 @@
   .similar-movie-image {
     height: 170px;
     width: 250px;
+  }
+}
+.movie-title {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-left: 8px;
+  text-decoration: none;
+}
+@media screen and (min-width: 630px) {
+  .movie-title {
+    font-size: 14px;
   }
 }

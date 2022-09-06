@@ -5,9 +5,10 @@ const MovieCard = props => {
   const {movieDetails} = props
   const {id, posterPath, title} = movieDetails
   return (
-    <Link to={`movies/${id}`}>
-      <li>
+    <Link className="link" to={`movies/${id}`}>
+      <li className="movie-card-item">
         <img className="movie-image" src={posterPath} alt={title} />
+        <p className="movie-title">{title}</p>
       </li>
     </Link>
   )

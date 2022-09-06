@@ -31,13 +31,6 @@ const settings = {
         slidesToScroll: 1,
       },
     },
-    {
-      breakpoint: 420,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
   ],
 }
 
@@ -49,9 +42,10 @@ const MoviesSlick = props => {
       {moviesList.map(eachMovie => {
         const {id, title, posterPath} = eachMovie
         return (
-          <Link to={`/movies/${id}`}>
+          <Link className="link" to={`/movies/${id}`}>
             <div className="slick-item" key={id}>
               <img className="movie-image" src={posterPath} alt={title} />
+              <p className="movie-title">{title}</p>
             </div>
           </Link>
         )

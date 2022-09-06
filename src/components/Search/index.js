@@ -5,6 +5,7 @@ import Loader from 'react-loader-spinner'
 import {HiOutlineSearch} from 'react-icons/hi'
 import {MdMenuOpen} from 'react-icons/md'
 import {AiFillCloseCircle} from 'react-icons/ai'
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
 import MovieCard from '../MovieCard'
 import './index.css'
 
@@ -21,6 +22,32 @@ class Search extends Component {
     searchInput: '',
     searchMoviesList: [],
     activeStatus: apiStatus.initial,
+    currentPage: 1,
+    totalPages: 0,
+  }
+
+  onClickLeft = () => {
+    const {currentPage} = this.state
+    if (currentPage > 1) {
+      this.setState(
+        prevState => ({
+          currentPage: prevState.currentPage - 1,
+        }),
+        this.getSearchMovieDetails,
+      )
+    }
+  }
+
+  onClickRight = () => {
+    const {totalPages, currentPage} = this.state
+    if (currentPage < totalPages) {
+      this.setState(
+        prevState => ({
+          currentPage: prevState.currentPage + 1,
+        }),
+        this.getSearchMovieDetails,
+      )
+    }
   }
 
   onclickMenuOpen = () => {
@@ -45,6 +72,7 @@ class Search extends Component {
   }
 
   getSearchMovieDetails = async () => {
+    const {currentPage} = this.state
     this.setState({activeStatus: apiStatus.inProgress})
     const {searchInput} = this.state
     const jwtToken = Cookies.get('jwt_token')
@@ -64,9 +92,17 @@ class Search extends Component {
         posterPath: each.poster_path,
         title: each.title,
       }))
+      const indexOfLastMovie = currentPage * 8
+      const indexOfFirstMovie = indexOfLastMovie - 8
+      const updatedSearchMoviesList = searchMoviesList.slice(
+        indexOfFirstMovie,
+        indexOfLastMovie,
+      )
+      const totalPages = Math.ceil(searchMoviesList.length / 8)
       this.setState({
-        searchMoviesList,
+        searchMoviesList: updatedSearchMoviesList,
         activeStatus: apiStatus.success,
+        totalPages,
       })
     } else {
       this.setState({
@@ -176,7 +212,7 @@ class Search extends Component {
                 <img
                   className="movie-page-nav-avthar"
                   alt="profile"
-                  src="https://res.cloudinary.com/dxgpp8aab/image/upload/v1661837431/Avatarmovies-page-nav-avthar_j5z9ho.png"
+                  src="https://res.cloudinary.com/dxgpp8aab/image/upload/v1662358106/Avataravthar-female_xmiijj.png"
                 />
               </Link>
               <MdMenuOpen
@@ -192,13 +228,34 @@ class Search extends Component {
   }
 
   renderListOfSearchResults = () => {
-    const {searchMoviesList} = this.state
+    const {searchMoviesList, currentPage, totalPages} = this.state
     return (
-      <ul className="popular-movies-list-container">
-        {searchMoviesList.map(eachMovie => (
-          <MovieCard key={eachMovie.id} movieDetails={eachMovie} />
-        ))}
-      </ul>
+      <div className="content-container">
+        <ul className="popular-movies-list-container">
+          {searchMoviesList.map(eachMovie => (
+            <MovieCard key={eachMovie.id} movieDetails={eachMovie} />
+          ))}
+        </ul>
+        <div className="pagination-container">
+          <button
+            className="pagination-button"
+            onClick={this.onClickLeft}
+            type="button"
+          >
+            <FaChevronLeft className="pagination-icon" />
+          </button>
+          <p className="page-numbers-style">
+            {currentPage} of {totalPages}
+          </p>
+          <button
+            className="pagination-button"
+            onClick={this.onClickRight}
+            type="button"
+          >
+            <FaChevronRight className="pagination-icon" />
+          </button>
+        </div>
+      </div>
     )
   }
 

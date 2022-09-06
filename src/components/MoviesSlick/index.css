@@ -1,7 +1,21 @@
+.slick-item {
+  width: 90px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 630px) and (max-width: 990px) {
+  .slick-item {
+    width: 160px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .slick-item {
+    width: 250px;
+  }
+}
 .movie-image {
   margin: 0px 10px;
   height: 70px;
-  width: 100px;
+  width: 90px;
   border-radius: 8px;
 }
 @media screen and (min-width: 630px) and (max-width: 990px) {
@@ -20,4 +34,21 @@
 .slick-prev:before,
 .slick-next:before {
   color: white;
+}
+.movie-title {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-left: 8px;
+  text-decoration: none;
+  overflow: hidden;
+}
+@media screen and (min-width: 630px) {
+  .movie-title {
+    font-size: 14px;
+  }
+}
+.link {
+  text-decoration: none;
 }

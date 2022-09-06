@@ -41,13 +41,13 @@
 }
 .membership-text {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 23px;
   color: #94a3b8;
 }
 @media screen and (min-width: 768px) {
   .membership-text {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 31px;
   }
 }
@@ -65,7 +65,7 @@
   }
 }
 .password-text {
-  color: #64748b;
+  color: #1e293b;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;

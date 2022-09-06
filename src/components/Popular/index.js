@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
@@ -17,13 +18,40 @@ class Popular extends Component {
   state = {
     popularMoviesList: [],
     activeStatus: apiStatus.initial,
+    currentPage: 1,
+    totalPages: 0,
   }
 
   componentDidMount() {
     this.getPopularMovies()
   }
 
+  onClickLeft = () => {
+    const {currentPage} = this.state
+    if (currentPage > 1) {
+      this.setState(
+        prevState => ({
+          currentPage: prevState.currentPage - 1,
+        }),
+        this.getPopularMovies,
+      )
+    }
+  }
+
+  onClickRight = () => {
+    const {totalPages, currentPage} = this.state
+    if (currentPage < totalPages) {
+      this.setState(
+        prevState => ({
+          currentPage: prevState.currentPage + 1,
+        }),
+        this.getPopularMovies,
+      )
+    }
+  }
+
   getPopularMovies = async () => {
+    const {currentPage} = this.state
     this.setState({activeStatus: apiStatus.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/movies-app/popular-movies`
@@ -42,9 +70,17 @@ class Popular extends Component {
         posterPath: each.poster_path,
         title: each.title,
       }))
+      const indexOfLastMovie = currentPage * 8
+      const indexOfFirstMovie = indexOfLastMovie - 8
+      const updatedPopularMoviesList = popularMoviesList.slice(
+        indexOfFirstMovie,
+        indexOfLastMovie,
+      )
+      const totalPages = Math.ceil(popularMoviesList.length / 8)
       this.setState({
-        popularMoviesList,
+        popularMoviesList: updatedPopularMoviesList,
         activeStatus: apiStatus.success,
+        totalPages,
       })
     } else {
       this.setState({
@@ -84,16 +120,37 @@ class Popular extends Component {
   )
 
   renderPopularMoviesSuccessView = () => {
-    const {popularMoviesList} = this.state
+    const {popularMoviesList, currentPage, totalPages} = this.state
     return (
-      <>
+      <div className="content-container">
         <ul className="popular-movies-list-container">
           {popularMoviesList.map(eachMovie => (
             <MovieCard key={eachMovie.id} movieDetails={eachMovie} />
           ))}
         </ul>
-        <Footer />
-      </>
+        <div>
+          <div className="pagination-container">
+            <button
+              className="pagination-button"
+              onClick={this.onClickLeft}
+              type="button"
+            >
+              <FaChevronLeft className="pagination-icon" />
+            </button>
+            <p className="page-numbers-style">
+              {currentPage} of {totalPages}
+            </p>
+            <button
+              className="pagination-button"
+              onClick={this.onClickRight}
+              type="button"
+            >
+              <FaChevronRight className="pagination-icon" />
+            </button>
+          </div>
+          <Footer />
+        </div>
+      </div>
     )
   }
 

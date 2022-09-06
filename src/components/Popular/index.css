@@ -50,3 +50,32 @@
   outline: none;
   cursor: pointer;
 }
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.pagination-icon {
+  color: #ffffff;
+}
+.page-numbers-style {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.content-container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

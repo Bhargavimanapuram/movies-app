@@ -154,7 +154,7 @@ class Header extends Component {
                 <img
                   className="movie-page-nav-avthar"
                   alt="profile"
-                  src="https://res.cloudinary.com/dxgpp8aab/image/upload/v1661837431/Avatarmovies-page-nav-avthar_j5z9ho.png"
+                  src="https://res.cloudinary.com/dxgpp8aab/image/upload/v1662358106/Avataravthar-female_xmiijj.png"
                 />
               </Link>
               <MdMenuOpen

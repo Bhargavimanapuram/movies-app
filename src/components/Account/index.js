@@ -25,8 +25,8 @@ const Account = props => {
         <div className="credentials-container">
           <p className="membership-text">Member Ship</p>
           <div className="name-password-container">
-            <p className="username-text">{username}</p>
-            <p className="password-text">Password :{maskedPassword}</p>
+            <p className="username-text">Username: {username}</p>
+            <p className="password-text">Password: {maskedPassword}</p>
           </div>
         </div>
         <hr className="horizontal-line" />
